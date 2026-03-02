@@ -1,21 +1,18 @@
-name: Prubea
+name: Prueba
 
 on:
   push:
 jobs:
   Prueba:
-    name: Build & Test con JUnit 5
+    name: Prueba
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Repo
         uses: actions/checkout@v6
-      - name: Java
-        uses: actions/setup-java@v4
+      - name: Set up
+        uses: actions/actions/setup-java@v5
         with:
-          java-version: '21'
           distribution: 'temurin'
-          cache: maven
-      - name: Compilar
-        run: mvn compile
-      - name: Test
+          java-version: '17'
+      - name: Probar
         run: mvn test
