@@ -18,7 +18,7 @@ class OperacionTest {
     @Test
     void testMultiplicacion() {
         Operacion op = new Operacion(10, 5);
-        assertEquals(55, op.multiplicacion(), "10 * 5 debe ser 50");
+        assertEquals(50, op.multiplicacion(), "10 * 5 debe ser 50");
     }
 
     @Test
